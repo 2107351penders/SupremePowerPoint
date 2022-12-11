@@ -5,8 +5,76 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SupremePowerPointApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="600" Width="920"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        >
+    <Border Background="#D9D9D9" CornerRadius="30">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" ></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
 
-    </Grid>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Logo here" 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center" 
+                       Foreground="black"
+                       FontSize="22"/>
+            
+            <StackPanel Grid.Column="2" Orientation="Horizontal" Background="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,15,0">
+                <MenuItem Click="FileButtonClick" x:Name="File" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <MenuItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="File"/>
+                        </StackPanel>
+                    </MenuItem.Header>
+                    <MenuItem.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Open"/>
+                            <MenuItem Header="option 2"/>
+                            <MenuItem Header="option 3"/>
+                        </ContextMenu>
+                    </MenuItem.ContextMenu>
+                </MenuItem>
+
+            </StackPanel>
+            <!--<StackPanel Grid.Column="2" Orientation="Horizontal" Background="White">
+                <Button Content="Theme"
+                    Height="30"
+                    Width="100"
+                    Foreground="white"
+                    FontSize="14" BorderBrush="#00707070" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox">
+                            <GradientStop Color="#FFFF6464"/>
+                            <GradientStop Color="#FFAD5AFF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button Content="Theme"
+                    Height="30"
+                    Width="100"
+                    Foreground="white"
+                    FontSize="14" BorderBrush="#00707070" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox">
+                            <GradientStop Color="#FFFF6464"/>
+                            <GradientStop Color="#FFAD5AFF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </StackPanel>-->
+
+           
+
+        </Grid>
+    </Border>
 </Window>

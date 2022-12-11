@@ -24,5 +24,16 @@ namespace SupremePowerPointApp
         {
             InitializeComponent();
         }
+
+
+        // file dropdown onclick function , this will render the dropdowns which include open file button 
+        private void FileButtonClick(object sender, RoutedEventArgs e)
+        {
+            var addButton = sender as FrameworkElement;
+            if (addButton != null)
+            {
+                addButton.ContextMenu.IsOpen = true;
+            }
+        }
     }
 }
