@@ -16,7 +16,7 @@ namespace SupremePowerPointApp
         {
             this.presentatieReader = presentatieReader;
             
-            if (!presentatieReader.openPresentatie(presentatieBestand))
+            if (presentatieReader.openPresentatie(presentatieBestand))
             { // Kan presentatiebestand niet openen
                 presentatie = null;
                 return;
