@@ -23,7 +23,7 @@
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            
+
             <!--top left logo spot, could also be used for + and - to add/delete slides-->
             <Border  BorderBrush="#B4B4B4" BorderThickness="0,0,0,1" Background="White" CornerRadius="30,0,0,0">
                 <Image Width="50" Height="auto" Source="C:\Users\incub\Source\Repos\SupremePowerPoint\SupremePowerPointApp\images\SlideIcon.png"></Image>
@@ -50,15 +50,15 @@
                                     <GradientStop Color="#FFAD5AFF" Offset="1"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                        <Button Content="Theme"
+                            <Button Content="Theme"
                             Width="100"
                             Foreground="white"
                             FontWeight="Bold"
                             FontSize="24"  HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}"
                                 BorderBrush="Transparent">
-                        </Button>
+                            </Button>
                         </Border>
-                        
+
                         <Button Content="Share"
                     Height="30"
                     Width="100"
@@ -90,16 +90,24 @@
                         </MenuItem>
                     </StackPanel>
 
-               
-            </StackPanel>
+
+                </StackPanel>
             </Border>
 
             <StackPanel Grid.Row="2">
 
             </StackPanel>
-
+            <!--TextAlignment="Center" HorizontalAlignment="Center"-->
             <Border Grid.Row="2" Background="white" CornerRadius="0,0,0,30">
                 <!--slides will be previewed here-->
+                <Canvas Margin="5,10,5,10">
+                    <Border CornerRadius="30" Margin="0,0,0,5" Width="140" Height="80">
+                        <TextBox TextAlignment="Center"  Background="red">
+                            heeleo
+                        </TextBox>
+                    </Border>
+                </Canvas>
+
             </Border>
         </Grid>
     </Border>
