@@ -11,6 +11,11 @@ namespace SupremePowerPointApp
         private List<Dia> diaLijst = new List<Dia>();
         public int zichtbareDia { get; private set; } = 0;
 
+        public int getDiaCount()
+        {
+            return diaLijst.Count;
+        }
+
         public bool displayDia(int diaNummer)
         {
             foreach (Dia dia in this.diaLijst)
