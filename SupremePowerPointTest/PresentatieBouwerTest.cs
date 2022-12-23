@@ -5,37 +5,58 @@ namespace SupremePowerPointTest
 {
     internal class ListPresentatieReader : IPresentatieReader
     {
-        /*
-         * Helper klasse die een lijst met nep dia's implementeert als een IPresentatieReader.
-         * Met behulp van deze klasse kunnen we onze PresentatieBouwer testen.
-         */
+       /*
+        * Helper klasse die een lijst met nep dia's implementeert als een IPresentatieReader.
+        * Met behulp van deze klasse kunnen we onze PresentatieBouwer testen.
+        */
+
+        List<Dia> diaLijst = new List<Dia>();
+
         public IEnumerator GetEnumerator()
         {
-            throw new NotImplementedException();
+            diaLijst.Add(new Dia(1));
+            diaLijst.Add(new Dia(2));
+            diaLijst.Add(new Dia(3));
+            diaLijst.Add(new Dia(4));
+            
+            return diaLijst.GetEnumerator();
         }
 
         public bool openPresentatie(string presentatieBestand)
         {
-            return 0;
+            return false;
         }
     }
 
-    public class TPresentatieBouwerTest
+    public class PresentatieBouwerTest
     {
         SupremePowerPointApp.PresentatieBouwer presentatieBouwer;
-        ListPresentatieReader listPresentatieReader = new ListPresentatieReader();
-
+        ListPresentatieReader listPresentatieReader;
+        Presentatie? presentatie;
 
         [SetUp]
         public void Setup()
         {
-            presentatieBouwer = new SupremePowerPointApp.PresentatieBouwer(); 
+            listPresentatieReader = new ListPresentatieReader();
+            presentatieBouwer = new SupremePowerPointApp.PresentatieBouwer(listPresentatieReader, "ListPresentatieReader.openPresentatie");
+            presentatie = presentatieBouwer.getPresentatie();
         }
 
         [Test]
-        public void Test1()
+        public void TestOpenPresentatie()
         {
-            Assert.Pass();
+            // ListPresentatieReader hoeft geen bestand te openen. Presentatie mag dus niet null zijn.
+            Assert.IsNotNull(presentatieBouwer.getPresentatie());
+        }
+
+        [Test]
+        public void TestDisplayDia()
+        {
+           /* Er bestaat een dia met diaNummer 3 in LijstPresentatieReader. displayDia(3) moet dus goed gaan en de zichtbare dia
+            * moet hierna 3 zijn.
+            */
+            presentatie.displayDia(3);
+            Assert.AreEqual(3, presentatie.zichtbareDia);
         }
     }
 }

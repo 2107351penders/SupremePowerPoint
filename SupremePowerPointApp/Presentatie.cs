@@ -13,9 +13,16 @@ namespace SupremePowerPointApp
 
         public bool displayDia(int diaNummer)
         {
-            zichtbareDia= diaNummer;
-            // Display dia. Return true wanneer dit lukt
-            return true;
+            foreach (Dia dia in this.diaLijst)
+            {
+                if (dia.diaNummer == diaNummer)
+                {
+                    zichtbareDia = diaNummer;
+                    // Display dia. Return true wanneer dit lukt
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void addDia(Dia dia)
