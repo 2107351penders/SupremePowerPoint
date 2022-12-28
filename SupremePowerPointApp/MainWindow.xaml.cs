@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,11 +30,19 @@ namespace SupremePowerPointApp
         // file dropdown onclick function , this will render the dropdowns which include open file button 
         private void FileButtonClick(object sender, RoutedEventArgs e)
         {
-            var addButton = sender as FrameworkElement;
-            if (addButton != null)
+            var button = sender as FrameworkElement;
+            if (button != null)
             {
-                addButton.ContextMenu.IsOpen = true;
+                button.ContextMenu.IsOpen = true;
             }
         }
+
+        private void OpenFile()
+        {
+            //JsonPresentatieReader.openPresentatie("1");
+            Console.Write("test");
+
+        }
+       
     }
 }

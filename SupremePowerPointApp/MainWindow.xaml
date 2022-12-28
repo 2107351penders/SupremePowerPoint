@@ -82,7 +82,7 @@
                             </MenuItem.Header>
                             <MenuItem.ContextMenu>
                                 <ContextMenu>
-                                    <MenuItem Header="Open"/>
+                                    <MenuItem Name="file_open" Header="Open" Click="OpenFile"/>
                                     <MenuItem Header="option 2"/>
                                     <MenuItem Header="option 3"/>
                                 </ContextMenu>
@@ -94,16 +94,19 @@
                 </StackPanel>
             </Border>
 
+            <Border Grid.Column="2" Grid.Row="2" Margin="60" Background="White" CornerRadius="20">
+                
+            </Border>
             <StackPanel Grid.Row="2">
 
             </StackPanel>
             <!--TextAlignment="Center" HorizontalAlignment="Center"-->
-            <Border Grid.Row="2" Background="white" CornerRadius="0,0,0,30">
+            <Border Grid.Row="2" CornerRadius="0,0,0,30" Background="White">
                 <!--slides will be previewed here-->
                 <Canvas Margin="5,10,5,10">
-                    <Border CornerRadius="30" Margin="0,0,0,5" Width="140" Height="80">
-                        <TextBox TextAlignment="Center"  Background="red">
-                            heeleo
+                    <Border CornerRadius="15" Margin="0,0,0,5" Width="140" Height="80" Background="#FFE2E2E2">
+                        <TextBox TextAlignment="Center" Background="#00000000" BorderBrush="{x:Null}">
+                            slide preview
                         </TextBox>
                     </Border>
                 </Canvas>
