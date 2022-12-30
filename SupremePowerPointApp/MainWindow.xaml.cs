@@ -24,25 +24,6 @@ namespace SupremePowerPointApp
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-
-        // file dropdown onclick function , this will render the dropdowns which include open file button 
-        private void FileButtonClick(object sender, RoutedEventArgs e)
-        {
-            var button = sender as FrameworkElement;
-            if (button != null)
-            {
-                button.ContextMenu.IsOpen = true;
-            }
-        }
-
-        private void OpenFile()
-        {
-            //JsonPresentatieReader.openPresentatie("1");
-            Console.Write("test");
-
-        }
-       
+        }      
     }
 }
