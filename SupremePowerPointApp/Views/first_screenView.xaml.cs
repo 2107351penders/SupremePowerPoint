@@ -28,17 +28,17 @@ namespace SupremePowerPointApp.Views
         // file dropdown onclick function , this will render the dropdowns which include open file button 
         private void FileButtonClick(object sender, RoutedEventArgs e)
         {
-            var button = sender as FrameworkElement;
-            if (button != null)
+            // open een windows file explorer window, met JSON als file filter
+            Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
+            openFileDlg.DefaultExt = ".json";
+            openFileDlg.Filter = "JSON (.json)|*.json";
+            Nullable<bool> result = openFileDlg.ShowDialog();
+           
+            if (result == true)
             {
-                button.ContextMenu.IsOpen = true;
+                //fileName.Text = openFileDlg.FileName;
+                //TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
-        }
-
-        private void OpenFile()
-        {
-            //JsonPresentatieReader.openPresentatie("1");
-            Console.Write("test");
 
         }
     }

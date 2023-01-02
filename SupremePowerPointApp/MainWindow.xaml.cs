@@ -24,6 +24,11 @@ namespace SupremePowerPointApp
         public MainWindow()
         {
             InitializeComponent();
-        }      
+        }
+
+        private void first_screenView_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,13 +1,15 @@
  {
- 	"Presentatie": {
- 		"Dia": [{
- 				"diaNummer": "1",
- 				"achtergrondKleur": "Color.White"
- 			},
- 			{
- 				"diaNummer": "2",
- 				"achtergrondKleur": "Color.Red"
- 			}
- 		]
- 	}
+  "Presentatie": {
+    "titel":  "Mijn Eerste Presentatie",
+    "Dia": [
+      {
+        "diaNummer": "1",
+        "achtergrondKleur": "Color.White"
+      },
+      {
+        "diaNummer": "2",
+        "achtergrondKleur": "Color.Red"
+      }
+    ]
+  }
  }

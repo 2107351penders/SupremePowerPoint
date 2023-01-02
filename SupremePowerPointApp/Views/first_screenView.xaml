@@ -20,8 +20,8 @@
             </Grid.RowDefinitions>
 
             <!--top left logo spot, could also be used for + and - to add/delete slides-->
-            <Border  BorderBrush="#B4B4B4" BorderThickness="0,0,0,1" Background="White" CornerRadius="30,0,0,0">
-                <Image Width="50" Height="auto" Source="C:\Users\incub\Source\Repos\SupremePowerPoint\SupremePowerPointApp\images\SlideIcon.png"></Image>
+            <Border BorderBrush="#B4B4B4" BorderThickness="0,0,0,1" Background="White" CornerRadius="30,0,0,0">
+                <Image Width="50" Height="auto" Source="/Views/SlideIcon.png"></Image>
             </Border>
 
 
@@ -69,23 +69,12 @@
                     </StackPanel>
                     <!--bottom system buttons panel-->
                     <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
-                        <MenuItem Click="FileButtonClick" x:Name="File" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30">
-                            <MenuItem.Header>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="File"/>
-                                </StackPanel>
-                            </MenuItem.Header>
-                            <MenuItem.ContextMenu>
-                                <ContextMenu>
-                                    <MenuItem Name="file_open" Header="Open"/>
-                                    <MenuItem Header="option 2"/>
-                                    <MenuItem Header="option 3"/>
-                                </ContextMenu>
-                            </MenuItem.ContextMenu>
-                        </MenuItem>
+                        <Button Content="Open File" Height="30" Width="100" 
+                                Foreground="black" Background="Transparent"
+                                FontSize="14" BorderBrush="Transparent" 
+                                HorizontalAlignment="Left" VerticalAlignment="Center"
+                               Click="FileButtonClick" />
                     </StackPanel>
-
-
                 </StackPanel>
             </Border>
 
@@ -95,10 +84,13 @@
             <StackPanel Grid.Row="2">
 
             </StackPanel>
+            <!--<TextBlock Grid.Column="2" Name="fileName"/>-->
+
             <!--TextAlignment="Center" HorizontalAlignment="Center"-->
             <Border Grid.Row="2" CornerRadius="0,0,0,30" Background="White">
                 <!--slides will be previewed here-->
-                <Canvas Margin="5,10,5,10">
+
+                <Canvas Margin="5,32,5,10">
                     <Border CornerRadius="15" Margin="0,0,0,5" Width="140" Height="80" Background="#FFE2E2E2">
                         <TextBox TextAlignment="Center" Background="#00000000" BorderBrush="{x:Null}">
                             slide preview
