@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Enumeration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,12 @@ namespace SupremePowerPointApp.Views
             {
                 //fileName.Text = openFileDlg.FileName;
                 //TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
+                JsonPresentatieReader jsonPresentatieReader = new JsonPresentatieReader();
+                PresentatieBouwer presentatieBouwer = new PresentatieBouwer(jsonPresentatieReader, openFileDlg.FileName);
+                Presentatie? presentatie = presentatieBouwer.getPresentatie();
+                if (presentatie == null) {
+                    // Ingelezen bestand kan niet worden omgezet naar een valide presentatie
+                }
             }
 
         }
