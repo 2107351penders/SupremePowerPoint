@@ -22,9 +22,17 @@ namespace SupremePowerPointApp
                 return;
             }
 
-            foreach (Dia dia in presentatieReader)
+            try
             {
-                presentatie.addDia(dia);
+                foreach (Dia dia in presentatieReader)
+                {
+                    presentatie.addDia(dia);
+                }
+            }
+            catch (Exception ex)
+            { // Ingelezen presentatiebestand is niet geldig
+                presentatie = null;
+                return;
             }
         }
 

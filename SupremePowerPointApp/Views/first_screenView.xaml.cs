@@ -44,6 +44,8 @@ namespace SupremePowerPointApp.Views
                 Presentatie? presentatie = presentatieBouwer.getPresentatie();
                 if (presentatie == null) {
                     // Ingelezen bestand kan niet worden omgezet naar een valide presentatie
+                    MessageBox.Show("Presentation file is invalid","SupremePowerPoint", MessageBoxButton.OK, MessageBoxImage.Error);
+
                 }
             }
 
