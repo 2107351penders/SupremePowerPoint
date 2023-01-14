@@ -40,6 +40,14 @@ namespace SupremePowerPointApp.Views
                 //TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
 
+        }  
+
+      
+
+        private void changeBG(object sender, MouseEventArgs e)
+        {
+
+            //mainDia.Background = new SolidColorBrush(Colors.Red);
         }
     }
 }

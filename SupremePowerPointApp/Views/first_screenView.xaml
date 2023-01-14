@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SupremePowerPointApp.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="920">
+             d:Height="600" d:Width="920">
     <Border Background="#D9D9D9" CornerRadius="30">
         <Grid>
             <!--column and row setup-->
@@ -45,16 +45,16 @@
                                     <GradientStop Color="#FFAD5AFF" Offset="1"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <Button Content="Theme"
+                            <!--<Button Content="Theme"
                             Width="100"
                             Foreground="white"
                             FontWeight="Bold"
                             FontSize="24"  HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}"
                                 BorderBrush="Transparent">
-                            </Button>
+                            </Button>-->
                         </Border>
 
-                        <Button Content="Share"
+                        <!--<Button Content="Share"
                     Height="30"
                     Width="100"
                     Foreground="white"
@@ -65,7 +65,7 @@
                                     <GradientStop Color="#FFAD5AFF" Offset="1"/>
                                 </LinearGradientBrush>
                             </Button.Background>
-                        </Button>
+                        </Button>-->
                     </StackPanel>
                     <!--bottom system buttons panel-->
                     <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
@@ -78,9 +78,28 @@
                 </StackPanel>
             </Border>
 
-            <Border Grid.Column="2" Grid.Row="2" Margin="60" Background="White" CornerRadius="20">
+            <Border Grid.Column="2" Grid.Row="2" Margin="60" Background="White" CornerRadius="20" MouseEnter="changeBG">
+                <ContentControl Grid.Column="2" Grid.Row="2"   Height="auto" Width="auto">
+                    <!--<Grid Background="white" x:Name="mainDia" Width="auto" Height="auto"></Grid>-->
+                    <!--<Canvas Background="white" x:Name="mainDia" Width="auto" Height="auto"></Canvas>-->
+                    <!--<DocumentViewer    Background="white" x:Name="mainDia" Width="auto" Height="auto"></DocumentViewer>-->
+                    <DocumentViewer>
+                        <DocumentViewer.Resources>
+                            <!-- Hides the search box-->
+                            <Style TargetType="ContentControl">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                            </Style>
 
+                            <!-- Hides the toolbar -->
+                            <Style TargetType="ToolBar">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                            </Style>
+                        </DocumentViewer.Resources>
+                    </DocumentViewer>
+                </ContentControl>
             </Border>
+            
+            
             <StackPanel Grid.Row="2">
 
             </StackPanel>
