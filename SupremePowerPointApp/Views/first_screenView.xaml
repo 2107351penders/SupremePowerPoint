@@ -45,27 +45,8 @@
                                     <GradientStop Color="#FFAD5AFF" Offset="1"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <!--<Button Content="Theme"
-                            Width="100"
-                            Foreground="white"
-                            FontWeight="Bold"
-                            FontSize="24"  HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}"
-                                BorderBrush="Transparent">
-                            </Button>-->
                         </Border>
 
-                        <!--<Button Content="Share"
-                    Height="30"
-                    Width="100"
-                    Foreground="white"
-                    FontSize="14" BorderBrush="Transparent" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0">
-                            <Button.Background>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox">
-                                    <GradientStop Color="#FFFF6464"/>
-                                    <GradientStop Color="#FFAD5AFF" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Button.Background>
-                        </Button>-->
                     </StackPanel>
                     <!--bottom system buttons panel-->
                     <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
@@ -83,15 +64,6 @@
                     <!--<Grid Background="white" x:Name="mainDia" Width="auto" Height="auto"></Grid>-->
                 </ContentControl>
             </Border>
-
-
-            <StackPanel Grid.Row="2">
-
-            </StackPanel>
-            <!--<TextBlock Grid.Column="2" Name="fileName"/>-->
-
-            <!--TextAlignment="Center" HorizontalAlignment="Center"-->
-
         </Grid>
     </Border>
 </UserControl>
