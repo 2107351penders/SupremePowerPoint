@@ -78,46 +78,20 @@
                 </StackPanel>
             </Border>
 
-            <Border Grid.Column="2" Grid.Row="2" Margin="60" Background="White" CornerRadius="20" MouseEnter="changeBG">
+            <Border Grid.Row="1" Margin="146,60,124,60" Background="White" CornerRadius="20" MouseEnter="changeBG" Grid.ColumnSpan="2">
                 <ContentControl Grid.Column="2" Grid.Row="2"   Height="auto" Width="auto">
                     <!--<Grid Background="white" x:Name="mainDia" Width="auto" Height="auto"></Grid>-->
-                    <!--<Canvas Background="white" x:Name="mainDia" Width="auto" Height="auto"></Canvas>-->
-                    <!--<DocumentViewer    Background="white" x:Name="mainDia" Width="auto" Height="auto"></DocumentViewer>-->
-                    <DocumentViewer>
-                        <DocumentViewer.Resources>
-                            <!-- Hides the search box-->
-                            <Style TargetType="ContentControl">
-                                <Setter Property="Visibility" Value="Collapsed" />
-                            </Style>
-
-                            <!-- Hides the toolbar -->
-                            <Style TargetType="ToolBar">
-                                <Setter Property="Visibility" Value="Collapsed" />
-                            </Style>
-                        </DocumentViewer.Resources>
-                    </DocumentViewer>
                 </ContentControl>
             </Border>
-            
-            
+
+
             <StackPanel Grid.Row="2">
 
             </StackPanel>
             <!--<TextBlock Grid.Column="2" Name="fileName"/>-->
 
             <!--TextAlignment="Center" HorizontalAlignment="Center"-->
-            <Border Grid.Row="2" CornerRadius="0,0,0,30" Background="White">
-                <!--slides will be previewed here-->
 
-                <Canvas Margin="5,32,5,10">
-                    <Border CornerRadius="15" Margin="0,0,0,5" Width="140" Height="80" Background="#FFE2E2E2">
-                        <TextBox TextAlignment="Center" Background="#00000000" BorderBrush="{x:Null}">
-                            slide preview
-                        </TextBox>
-                    </Border>
-                </Canvas>
-
-            </Border>
         </Grid>
     </Border>
 </UserControl>
