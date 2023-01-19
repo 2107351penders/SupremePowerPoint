@@ -8,5 +8,8 @@ namespace SupremePowerPointApp
 {
     internal interface IAfbeelding
     {
+        public int pos_x { get; set; }
+        public int pos_y { get; set; }
+        public string afbeeldingBestand { get; set; }
     }
 }
