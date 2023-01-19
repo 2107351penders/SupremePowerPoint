@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SupremePowerPointApp
 {
-    internal class Layout
+    internal interface ILayout
     {
     }
 }

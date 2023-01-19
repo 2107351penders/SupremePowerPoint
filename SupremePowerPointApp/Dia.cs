@@ -10,7 +10,7 @@ namespace SupremePowerPointApp
     internal class Dia
     {
         public int diaNummer { get; private set; }
-        public Layout diaLayout { get; private set; }
+        public ILayout diaLayout { get; private set; }
         public Color achtergrondKleur { get; private set; }
         public Dia(int diaNummer)
         {
