@@ -11,7 +11,7 @@ namespace SupremePowerPointApp
         public int layoutNumber = 4;
         public OutroText outro_tekst;
 
-        public Layout_Outro(string tekst)
+        public Layout_Outro(string tekst, string? element2 = null)
         {
             outro_tekst = new OutroText(0, 400, tekst);
         }
