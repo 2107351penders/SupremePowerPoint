@@ -4,11 +4,23 @@
     "Dia": [
       {
         "diaNummer": "1",
-        "achtergrondKleur": "Color.White"
+        "achtergrondKleur": "Color.White",
+        "diaLayout": 1
       },
       {
         "diaNummer": "2",
-        "achtergrondKleur": "Color.Red"
+        "achtergrondKleur": "Color.Red",
+        "diaLayout": 2
+      },
+      {
+        "diaNummer": "3",
+        "achtergrondKleur": "Color.White",
+        "diaLayout": 3
+      },
+      {
+        "diaNummer": "4",
+        "achtergrondKleur": "Color.Red",
+        "diaLayout": 4
       }
     ]
   }
