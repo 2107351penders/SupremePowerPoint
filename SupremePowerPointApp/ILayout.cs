@@ -8,5 +8,6 @@ namespace SupremePowerPointApp
 {
     internal interface ILayout
     {
+        public int layoutNumber { get; set; }
     }
 }

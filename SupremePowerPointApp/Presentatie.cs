@@ -9,25 +9,24 @@ namespace SupremePowerPointApp
     internal class Presentatie
     {
         private List<Dia> diaLijst = new List<Dia>();
-        public int zichtbareDia { get; private set; } = 0;
+        public int zichtbareDia { get; private set; } = 1;
 
         public int getDiaCount()
         {
             return diaLijst.Count;
         }
 
-        public bool displayDia(int diaNummer)
+        public Dia? displayDia(int diaNummer)
         {
             foreach (Dia dia in this.diaLijst)
             {
                 if (dia.diaNummer == diaNummer)
                 {
                     zichtbareDia = diaNummer;
-                    // Display dia. Return true wanneer dit lukt
-                    return true;
+                    return dia;
                 }
             }
-            return false;
+            return null;
         }
 
         public void addDia(Dia dia)

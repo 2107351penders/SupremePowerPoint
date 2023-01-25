@@ -8,7 +8,7 @@ namespace SupremePowerPointApp
 {
     internal class Layout_Intro : ILayout
     {
-        public int layoutNumber = 1;
+        public int layoutNumber { get; set; } = 1;
         public IntroText linker_tekstvak;
         public IntroAfbeelding rechter_afbeelding;
         

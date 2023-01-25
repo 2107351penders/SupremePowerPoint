@@ -45,7 +45,27 @@ namespace SupremePowerPointApp.Views
                 if (presentatie == null) {
                     // Ingelezen bestand kan niet worden omgezet naar een valide presentatie
                     MessageBox.Show("Presentation file is invalid","SupremePowerPoint", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
 
+                Dia? currentDia = presentatie.displayDia(presentatie.zichtbareDia);
+                if (currentDia == null)
+                {
+                    MessageBox.Show("Oopsie-woopsie de dia is stukkie-wukkie");
+                }
+
+                int currentLayout = currentDia.diaLayout.layoutNumber;
+                if (currentLayout == 1)
+                {
+                    //DiaBox.Navigate // Laat intro layout zien
+                } else if (currentLayout == 2)
+                {
+                    //DiaBox.Navigate
+                } else if (currentLayout == 3)
+                {
+                    //DiaBox.Navigate
+                } else if (currentLayout == 4)
+                {
+                    //DiaBox.Navigate
                 }
             }
 

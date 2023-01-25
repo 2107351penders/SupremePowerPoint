@@ -8,7 +8,7 @@ namespace SupremePowerPointApp
 {
     internal class Layout_Images : ILayout
     {
-        public int layoutNumber = 3;
+        public int layoutNumber { get; set; } = 3;
         public ImagesAfbeelding linker_afbeelding;
         public ImagesAfbeelding rechter_afbeelding;
         
