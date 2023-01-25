@@ -12,6 +12,6 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Name="centerTextBox" HorizontalAlignment="center" VerticalAlignment="Center" Text="Slide 2" FontSize="80"></TextBlock>
+        <TextBlock Name="centerTextBox" HorizontalAlignment="center" VerticalAlignment="Center" Text="Slide 2" FontSize="64"></TextBlock>
     </Grid>
 </Page>

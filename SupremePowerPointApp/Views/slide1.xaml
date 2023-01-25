@@ -10,11 +10,11 @@
 
     <Grid Background="#A64468">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" ></ColumnDefinition>
+            <ColumnDefinition Width="400" ></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <TextBlock HorizontalAlignment="center" VerticalAlignment="Center" Name="LinkerTekstvak" Text="Slide 1"></TextBlock>
+        <TextBlock FontWeight="Bold" FontSize="24" HorizontalAlignment="center" VerticalAlignment="Center" Name="LinkerTekstvak" Text="Slide 1"></TextBlock>
         <Image Height="200" Width="200" Name="RechterAfbeelding" Grid.Column="2" Source="/images/links_afbeelding.jpg"></Image>
     </Grid>
 </Page>

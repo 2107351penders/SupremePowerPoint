@@ -9,12 +9,12 @@
       Title="slide3">
 
 
-    <Grid Background="#F29C6B">
+    <Grid Background="#F29C6B" Margin="0,2,0,-2">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300" ></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Image Name="RechterAfbeelding" Grid.Column="2"></Image>
-        <Image Name="RechterAfbeelding2" Grid.Column="2"></Image>
+        <Image Name="LinkerAfbeelding"  Grid.Column="0" Margin="20"></Image>
+        <Image Name="RechterAfbeelding" Grid.Column="1" Margin="20"></Image>
     </Grid>
 </Page>

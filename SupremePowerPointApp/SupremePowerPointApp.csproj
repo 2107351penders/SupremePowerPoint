@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\links_afbeelding.jpg" />
+    <None Remove="images\SlideIcon.png" />
     <None Remove="Views\SlideIcon.png" />
   </ItemGroup>
 
@@ -19,7 +21,16 @@
     <None Update="images\links_afbeelding.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="images\SlideIcon.png">
+    <None Update="intro_afbeelding.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="links_afbeelding.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="rechts_afbeelding.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="tekst_afbeelding.jpeg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="voorbeeld_presentatie.json">
@@ -33,6 +44,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="images\SlideIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Views\SlideIcon.png" />
   </ItemGroup>
 

@@ -26,7 +26,7 @@ namespace SupremePowerPointApp
 
         public BitmapImage getAfbeeldingElement()
         {
-            return new BitmapImage(new Uri(rechter_afbeelding.afbeeldingBestand, UriKind.Relative));
+            return new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + rechter_afbeelding.afbeeldingBestand, UriKind.Absolute));
         }
     }
 

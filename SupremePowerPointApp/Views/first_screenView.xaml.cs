@@ -86,8 +86,8 @@ namespace SupremePowerPointApp.Views
             else if (currentLayout == 3)
             {
                 slide3 slide3 = new slide3();
-                slide3.RechterAfbeelding.Source = currentDia.diaLayout.getAfbeeldingElement();
-                slide3.RechterAfbeelding2.Source = new BitmapImage(new Uri("/images/", UriKind.Relative));
+                slide3.LinkerAfbeelding.Source = currentDia.diaLayout.getAfbeeldingElement();
+                slide3.RechterAfbeelding.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "rechts_afbeelding.jpeg", UriKind.Absolute));
                 DiaBox.Navigate(slide3);
             }
             else if (currentLayout == 4)
@@ -113,7 +113,7 @@ namespace SupremePowerPointApp.Views
         {
             if (e.Key == Key.Down)
             {
-                if (diaNummer + 1 == presentatie.getDiaCount()) return; // We zijn al op de laatste dia
+                if (diaNummer + 1 > presentatie.getDiaCount()) return; // We zijn al op de laatste dia
                 diaNummer += 1;
             }
             else if (e.Key == Key.Up) {

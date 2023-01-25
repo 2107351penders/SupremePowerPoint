@@ -1,5 +1,6 @@
 using SupremePowerPointApp;
 using System.Collections;
+using System.Drawing;
 
 namespace SupremePowerPointTest
 {
@@ -14,10 +15,10 @@ namespace SupremePowerPointTest
 
         public IEnumerator GetEnumerator()
         {
-            diaLijst.Add(new Dia(1));
-            diaLijst.Add(new Dia(2));
-            diaLijst.Add(new Dia(3));
-            diaLijst.Add(new Dia(4));
+            diaLijst.Add(new Dia(1, new Layout_Intro("test", "test"), Color.White));
+            diaLijst.Add(new Dia(2, new Layout_Intro("test", "test"), Color.White));
+            diaLijst.Add(new Dia(3, new Layout_Intro("test", "test"), Color.White));
+            diaLijst.Add(new Dia(4, new Layout_Intro("test", "test"), Color.White));
             
             return diaLijst.GetEnumerator();
         }

@@ -10,10 +10,10 @@
 
     <Grid Background="#F2E49B">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250" ></ColumnDefinition>
+            <ColumnDefinition Width="300" ></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Name="LinkerTekstvak" Text="Slide 2"></TextBlock>
-        <Image Grid.Column="2" Name="RechterAfbeelding"></Image>
+        <TextBlock Name="LinkerTekstvak" Text="Slide 2" FontSize="24" TextWrapping="Wrap" Margin="20 20 20 20"></TextBlock>
+        <Image Grid.Column="2" Name="RechterAfbeelding" Margin="20"></Image>
     </Grid>
 </Page>
