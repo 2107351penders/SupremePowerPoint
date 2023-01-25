@@ -43,7 +43,7 @@ namespace SupremePowerPointApp.Views
                 //TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
                 JsonPresentatieReader jsonPresentatieReader = new JsonPresentatieReader();
                 PresentatieBouwer presentatieBouwer = new PresentatieBouwer(jsonPresentatieReader, openFileDlg.FileName);
-                Ppresentatie = presentatieBouwer.getPresentatie();
+                presentatie = presentatieBouwer.getPresentatie();
                 if (presentatie == null)
                 {
                     // Ingelezen bestand kan niet worden omgezet naar een valide presentatie

@@ -20,7 +20,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="images\SlideIcon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="voorbeeld_presentatie.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
