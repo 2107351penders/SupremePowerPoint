@@ -33,4 +33,31 @@
     <Resource Include="Views\SlideIcon.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Views\slide4.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\slide3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\slide2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Views\slide4.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\slide3.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\slide2.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>
