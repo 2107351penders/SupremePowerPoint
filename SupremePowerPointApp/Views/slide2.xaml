@@ -14,5 +14,6 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TextBlock Text="Slide 2"></TextBlock>
+        <Image Grid.Column="2"></Image>
     </Grid>
 </Page>
