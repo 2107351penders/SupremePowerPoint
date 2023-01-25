@@ -50,17 +50,22 @@
                     </StackPanel>
                     <!--bottom system buttons panel-->
                     <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
-                        <Button Content="Open File" Height="30" Width="100" 
+                        <Button Content="Open File" Height="60" Width="100" 
                                 Foreground="black" Background="Transparent"
                                 FontSize="14" BorderBrush="Transparent" 
                                 HorizontalAlignment="Left" VerticalAlignment="Center"
                                Click="FileButtonClick" />
-                    </StackPanel>
+                        <Button Content="Close" Height="60" Width="100" 
+                                Foreground="black" Background="Transparent"
+                                FontSize="14" BorderBrush="Transparent" 
+                                HorizontalAlignment="Left" VerticalAlignment="Center"
+                               Click="CloseButtonClick" />
+                        </StackPanel>
                 </StackPanel>
             </Border>
 
-            <Border Grid.Row="1" Margin="146,60,124,60" Background="White" CornerRadius="20" MouseEnter="changeBG" Grid.ColumnSpan="2">
-                <Frame NavigationUIVisibility="Hidden" Name="DiaBox" Navigated="DiaBox_Navigated" KeyDown="ChangeDia"></Frame>
+            <Border Grid.Row="1" Margin="20,20,20,20" Background="White" CornerRadius="20" MouseEnter="changeBG" Grid.ColumnSpan="2">
+                <Frame NavigationUIVisibility="Hidden" Name="DiaBox" Navigated="DiaBox_Navigated" KeyDown="ChangeDia"/>
             </Border>
         </Grid>
     </Border>

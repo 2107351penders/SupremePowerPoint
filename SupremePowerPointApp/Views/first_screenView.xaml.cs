@@ -28,6 +28,11 @@ namespace SupremePowerPointApp.Views
             InitializeComponent();
         }
 
+        private void CloseButtonClick(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+
         // file dropdown onclick function , this will render the dropdowns which include open file button 
         private void FileButtonClick(object sender, RoutedEventArgs e)
         {
