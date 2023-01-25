@@ -34,7 +34,7 @@ namespace SupremePowerPointApp.Views
             openFileDlg.DefaultExt = ".json";
             openFileDlg.Filter = "JSON (.json)|*.json";
             Nullable<bool> result = openFileDlg.ShowDialog();
-           
+
             if (result == true)
             {
                 //fileName.Text = openFileDlg.FileName;
@@ -42,33 +42,48 @@ namespace SupremePowerPointApp.Views
                 JsonPresentatieReader jsonPresentatieReader = new JsonPresentatieReader();
                 PresentatieBouwer presentatieBouwer = new PresentatieBouwer(jsonPresentatieReader, openFileDlg.FileName);
                 Presentatie? presentatie = presentatieBouwer.getPresentatie();
-                if (presentatie == null) {
+                if (presentatie == null)
+                {
                     // Ingelezen bestand kan niet worden omgezet naar een valide presentatie
-                    MessageBox.Show("Presentation file is invalid","SupremePowerPoint", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Presentation file is invalid", "SupremePowerPoint", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                Dia? currentDia = presentatie.displayDia(presentatie.zichtbareDia);
+               
+                int DiaNummer = presentatie.zichtbareDia;
+                DiaNummer = 1;
+                Dia? currentDia = presentatie.displayDia(DiaNummer);
                 if (currentDia == null)
                 {
                     MessageBox.Show("Oopsie-woopsie de dia is stukkie-wukkie");
                 }
 
                 int currentLayout = currentDia.diaLayout.layoutNumber;
+
                 if (currentLayout == 1)
                 {
-                    DiaBox.Navigate("slide1.xaml");
-                } else if (currentLayout == 2)
+                    slide1 slide1 = new slide1();
+                    slide1.LinkerTekstvak.Text = currentDia.diaLayout.getTextElement();
+                    slide1.RechterAfbeelding.Source = currentDia.diaLayout.getAfbeeldingElement();
+                    DiaBox.Navigate(slide1);
+                }
+                else if (currentLayout == 2)
                 {
-                    DiaBox.Navigate("slide2.xaml");
-                } else if (currentLayout == 3)
+                    slide2 slide2 = new slide2();
+                    slide2.LinkerTekstvak.Text = currentDia.diaLayout.getTextElement();
+                    slide2.RechterAfbeelding.Source = currentDia.diaLayout.getAfbeeldingElement();
+                    DiaBox.Navigate(slide2);
+                }
+                else if (currentLayout == 3)
                 {
-                    DiaBox.Navigate("slide3.xaml");
-                } else if (currentLayout == 4)
+                    slide3 slide3 = new slide3();
+                    slide3.RechterAfbeelding.Source = currentDia.diaLayout.getAfbeeldingElement();
+                    DiaBox.Navigate(slide3);
+                }
+                else if (currentLayout == 4)
                 {
                     DiaBox.Navigate("slide4.xaml");
                 }
             }
-
         }  
 
       

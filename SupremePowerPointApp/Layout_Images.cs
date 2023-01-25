@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace SupremePowerPointApp
 {
@@ -16,6 +17,16 @@ namespace SupremePowerPointApp
         {
             linker_afbeelding = new ImagesAfbeelding(0, 300, afbeeldingsBestandLinks);
             rechter_afbeelding = new ImagesAfbeelding(600, 0, afbeeldingBestandRechts);
+        }
+
+        public string getTextElement()
+        {
+            throw new NotImplementedException();
+        }
+
+        public BitmapImage getAfbeeldingElement()
+        {
+            return new BitmapImage(new Uri(linker_afbeelding.afbeeldingBestand, UriKind.Relative));
         }
     }
 

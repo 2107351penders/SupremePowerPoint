@@ -14,7 +14,7 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
      
-        <TextBlock Text="Slide 1"></TextBlock>
-        <Image Grid.Column="2"></Image>
+        <TextBlock Name="LinkerTekstvak" Text="Slide 1"></TextBlock>
+        <Image Name="RechterAfbeelding" Grid.Column="2"></Image>
     </Grid>
 </Page>

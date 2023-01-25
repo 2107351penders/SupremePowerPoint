@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace SupremePowerPointApp
 {
@@ -14,6 +15,16 @@ namespace SupremePowerPointApp
         public Layout_Outro(string tekst, string? element2 = null)
         {
             outro_tekst = new OutroText(0, 400, tekst);
+        }
+
+        public string getTextElement()
+        {
+            throw new NotImplementedException();
+        }
+
+        public BitmapImage getAfbeeldingElement()
+        {
+            throw new NotImplementedException();
         }
     }
 

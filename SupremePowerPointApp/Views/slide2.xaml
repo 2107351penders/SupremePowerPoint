@@ -13,6 +13,7 @@
             <ColumnDefinition Width="250" ></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Slide 2"></TextBlock>
+        <TextBlock Name="LinkerTekstvak" Text="Slide 2"></TextBlock>
+        <Image Grid.Column="2" Name="RechterAfbeelding"></Image>
     </Grid>
 </Page>
