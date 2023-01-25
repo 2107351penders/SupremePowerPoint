@@ -116,7 +116,7 @@ namespace SupremePowerPointApp.Views
                 if (diaNummer + 1 == presentatie.getDiaCount()) return; // We zijn al op de laatste dia
                 diaNummer += 1;
             }
-            else if (e.Key == Key.Down) {
+            else if (e.Key == Key.Up) {
                 if (diaNummer == 1) return; // We zijn al op de eerste dia
                 diaNummer -= 1;
             }
