@@ -64,6 +64,7 @@ namespace SupremePowerPointApp.Views
                     slide1 slide1 = new slide1();
                     slide1.LinkerTekstvak.Text = currentDia.diaLayout.getTextElement();
                     slide1.RechterAfbeelding.Source = currentDia.diaLayout.getAfbeeldingElement();
+
                     DiaBox.Navigate(slide1);
                 }
                 else if (currentLayout == 2)

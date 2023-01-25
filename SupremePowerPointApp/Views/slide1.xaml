@@ -13,8 +13,8 @@
             <ColumnDefinition Width="200" ></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-     
-        <TextBlock Name="LinkerTekstvak" Text="Slide 1"></TextBlock>
-        <Image Name="RechterAfbeelding" Grid.Column="2"></Image>
+
+        <TextBlock HorizontalAlignment="center" VerticalAlignment="Center" Name="LinkerTekstvak" Text="Slide 1"></TextBlock>
+        <Image Height="200" Width="200" Name="RechterAfbeelding" Grid.Column="2" Source="/images/links_afbeelding.jpg"></Image>
     </Grid>
 </Page>
