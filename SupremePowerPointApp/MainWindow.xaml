@@ -13,6 +13,6 @@
         WindowStyle="None"
         >
     <Grid>
-        <views:first_screenView Loaded="first_screenView_Loaded"/>
+        <views:first_screenView Loaded="first_screenView_Loaded" MouseDown="Bar_MouseDown"/>
     </Grid>
 </Window>

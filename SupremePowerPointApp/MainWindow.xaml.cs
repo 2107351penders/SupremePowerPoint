@@ -30,5 +30,10 @@ namespace SupremePowerPointApp
         {
 
         }
+
+        private void Bar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }
