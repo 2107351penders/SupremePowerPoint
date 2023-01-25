@@ -13,5 +13,6 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TextBlock Name="centerTextBox" HorizontalAlignment="center" VerticalAlignment="Center" Text="Slide 2" FontSize="64"></TextBlock>
+        <Button Content="Terug naar slide 2" Margin="200 300 200 100" Click="Button_Click"></Button>
     </Grid>
 </Page>

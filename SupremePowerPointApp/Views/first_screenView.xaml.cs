@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO.Enumeration;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,7 +22,7 @@ namespace SupremePowerPointApp.Views
     /// </summary>
     public partial class first_screenView : UserControl
     {
-        int diaNummer = 1;
+        static int diaNummer = 1;
         Presentatie? presentatie = null;
         public first_screenView()
         {
@@ -93,8 +94,15 @@ namespace SupremePowerPointApp.Views
             else if (currentLayout == 4)
             {
                 slide4 slide4 = new slide4();
+                slide4.ClickDiaLink += ClickDiaLinkHandler;
                 slide4.centerTextBox.Text = currentDia.diaLayout.getTextElement();
                 DiaBox.Navigate(slide4);
+            }
+
+            void ClickDiaLinkHandler(Object sender, ClickDiaLinkArgs args)
+            {
+                diaNummer = args.nieuweDia;
+                showDiaLoop(presentatie, diaNummer);
             }
         }
 

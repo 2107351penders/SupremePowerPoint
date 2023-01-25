@@ -24,5 +24,19 @@ namespace SupremePowerPointApp.Views
         {
             InitializeComponent();
         }
+
+        public event EventHandler<ClickDiaLinkArgs> ClickDiaLink;
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var args = new ClickDiaLinkArgs();
+            args.nieuweDia = 2;
+            ClickDiaLink.Invoke(this, args);
+        }
     }
+
+    public class ClickDiaLinkArgs : EventArgs
+    {
+        public int nieuweDia { get; set; }
+    }
+
 }
