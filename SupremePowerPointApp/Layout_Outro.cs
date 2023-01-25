@@ -8,7 +8,7 @@ namespace SupremePowerPointApp
 {
     internal class Layout_Outro : ILayout
     {
-        public int layoutNumber = 4;
+        public int layoutNumber { get; set; } = 4;
         public OutroText outro_tekst;
 
         public Layout_Outro(string tekst, string? element2 = null)

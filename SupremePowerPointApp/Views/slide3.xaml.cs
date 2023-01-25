@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace SupremePowerPointApp.Views
 {
     /// <summary>
-    /// Interaction logic for slide1.xaml
+    /// Interaction logic for slide3.xaml
     /// </summary>
-    public partial class slide1 : Page
+    public partial class slide3 : Page
     {
-        public slide1()
+        public slide3()
         {
             InitializeComponent();
         }

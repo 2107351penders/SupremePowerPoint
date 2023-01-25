@@ -8,7 +8,7 @@ namespace SupremePowerPointApp
 {
     internal class Layout_TextImage : ILayout
     {
-        public int layoutNumber = 2;
+        public int layoutNumber { get; set; } = 2;
         public TextImageText linker_tekstvak;
         public TextImageAfbeelding rechter_afbeelding;
         

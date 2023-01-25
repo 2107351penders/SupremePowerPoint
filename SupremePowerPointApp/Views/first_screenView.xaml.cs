@@ -56,16 +56,16 @@ namespace SupremePowerPointApp.Views
                 int currentLayout = currentDia.diaLayout.layoutNumber;
                 if (currentLayout == 1)
                 {
-                    //DiaBox.Navigate // Laat intro layout zien
+                    DiaBox.Navigate("slide1.xaml");
                 } else if (currentLayout == 2)
                 {
-                    //DiaBox.Navigate
+                    DiaBox.Navigate("slide2.xaml");
                 } else if (currentLayout == 3)
                 {
-                    //DiaBox.Navigate
+                    DiaBox.Navigate("slide3.xaml");
                 } else if (currentLayout == 4)
                 {
-                    //DiaBox.Navigate
+                    DiaBox.Navigate("slide4.xaml");
                 }
             }
 
