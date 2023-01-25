@@ -60,7 +60,7 @@
             </Border>
 
             <Border Grid.Row="1" Margin="146,60,124,60" Background="White" CornerRadius="20" MouseEnter="changeBG" Grid.ColumnSpan="2">
-                <Frame Name="DiaBox" Navigated="DiaBox_Navigated"></Frame>
+                <Frame Name="DiaBox" Navigated="DiaBox_Navigated" KeyDown="ChangeDia"></Frame>
             </Border>
         </Grid>
     </Border>

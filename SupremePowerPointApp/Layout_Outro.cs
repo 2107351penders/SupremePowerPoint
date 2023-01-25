@@ -19,7 +19,7 @@ namespace SupremePowerPointApp
 
         public string getTextElement()
         {
-            throw new NotImplementedException();
+            return outro_tekst.text;
         }
 
         public BitmapImage getAfbeeldingElement()

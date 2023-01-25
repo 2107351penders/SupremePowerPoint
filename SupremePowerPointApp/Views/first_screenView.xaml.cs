@@ -21,6 +21,8 @@ namespace SupremePowerPointApp.Views
     /// </summary>
     public partial class first_screenView : UserControl
     {
+        int diaNummer = 1;
+        Presentatie? presentatie = null;
         public first_screenView()
         {
             InitializeComponent();
@@ -41,52 +43,55 @@ namespace SupremePowerPointApp.Views
                 //TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
                 JsonPresentatieReader jsonPresentatieReader = new JsonPresentatieReader();
                 PresentatieBouwer presentatieBouwer = new PresentatieBouwer(jsonPresentatieReader, openFileDlg.FileName);
-                Presentatie? presentatie = presentatieBouwer.getPresentatie();
+                Ppresentatie = presentatieBouwer.getPresentatie();
                 if (presentatie == null)
                 {
                     // Ingelezen bestand kan niet worden omgezet naar een valide presentatie
                     MessageBox.Show("Presentation file is invalid", "SupremePowerPoint", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-
-               
-                int DiaNummer = presentatie.zichtbareDia;
-                DiaNummer = 1;
-                Dia? currentDia = presentatie.displayDia(DiaNummer);
-                if (currentDia == null)
-                {
-                    MessageBox.Show("Oopsie-woopsie de dia is stukkie-wukkie");
-                }
-
-                int currentLayout = currentDia.diaLayout.layoutNumber;
-
-                if (currentLayout == 1)
-                {
-                    slide1 slide1 = new slide1();
-                    slide1.LinkerTekstvak.Text = currentDia.diaLayout.getTextElement();
-                    slide1.RechterAfbeelding.Source = currentDia.diaLayout.getAfbeeldingElement();
-                    DiaBox.Navigate(slide1);
-                }
-                else if (currentLayout == 2)
-                {
-                    slide2 slide2 = new slide2();
-                    slide2.LinkerTekstvak.Text = currentDia.diaLayout.getTextElement();
-                    slide2.RechterAfbeelding.Source = currentDia.diaLayout.getAfbeeldingElement();
-                    DiaBox.Navigate(slide2);
-                }
-                else if (currentLayout == 3)
-                {
-                    slide3 slide3 = new slide3();
-                    slide3.RechterAfbeelding.Source = currentDia.diaLayout.getAfbeeldingElement();
-                    DiaBox.Navigate(slide3);
-                }
-                else if (currentLayout == 4)
-                {
-                    DiaBox.Navigate("slide4.xaml");
-                }
+                
+                showDiaLoop(presentatie, diaNummer);
             }
-        }  
+        }
 
-      
+        private void showDiaLoop(Presentatie presentatie, int diaNummer)
+        {
+            Dia? currentDia = presentatie.displayDia(diaNummer);
+            if (currentDia == null)
+            {
+                MessageBox.Show("Oopsie-woopsie de dia is stukkie-wukkie");
+            }
+
+            int currentLayout = currentDia.diaLayout.layoutNumber;
+
+            if (currentLayout == 1)
+            {
+                slide1 slide1 = new slide1();
+                slide1.LinkerTekstvak.Text = currentDia.diaLayout.getTextElement();
+                slide1.RechterAfbeelding.Source = currentDia.diaLayout.getAfbeeldingElement();
+                DiaBox.Navigate(slide1);
+            }
+            else if (currentLayout == 2)
+            {
+                slide2 slide2 = new slide2();
+                slide2.LinkerTekstvak.Text = currentDia.diaLayout.getTextElement();
+                slide2.RechterAfbeelding.Source = currentDia.diaLayout.getAfbeeldingElement();
+                DiaBox.Navigate(slide2);
+            }
+            else if (currentLayout == 3)
+            {
+                slide3 slide3 = new slide3();
+                slide3.RechterAfbeelding.Source = currentDia.diaLayout.getAfbeeldingElement();
+                slide3.RechterAfbeelding2.Source = new BitmapImage(new Uri("/images/", UriKind.Relative));
+                DiaBox.Navigate(slide3);
+            }
+            else if (currentLayout == 4)
+            {
+                slide4 slide4 = new slide4();
+                slide4.centerTextBox.Text = currentDia.diaLayout.getTextElement();
+                DiaBox.Navigate(slide4);
+            }
+        }
 
         private void changeBG(object sender, MouseEventArgs e)
         {
@@ -97,6 +102,18 @@ namespace SupremePowerPointApp.Views
         private void DiaBox_Navigated(object sender, NavigationEventArgs e)
         {
 
+        }
+
+        private void ChangeDia(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Down) {
+                diaNummer += 1;
+            }
+            else if (e.Key == Key.Down) {
+                diaNummer -= 1;
+            }
+
+            showDiaLoop(presentatie, diaNummer);
         }
     }
 }
