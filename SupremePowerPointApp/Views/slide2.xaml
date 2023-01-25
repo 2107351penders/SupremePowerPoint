@@ -5,10 +5,14 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SupremePowerPointApp.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:Height="403" d:Width="650"
       Title="slide2">
 
-    <Grid>
-        
+    <Grid Background="#F2E49B">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" ></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Slide 2"></TextBlock>
     </Grid>
 </Page>

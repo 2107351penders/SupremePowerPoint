@@ -78,5 +78,10 @@ namespace SupremePowerPointApp.Views
 
             //mainDia.Background = new SolidColorBrush(Colors.Red);
         }
+
+        private void DiaBox_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }
